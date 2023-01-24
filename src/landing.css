@@ -1,0 +1,27 @@
+.landing-image{
+    width: 1800px;
+    height: 800px;
+}
+
+/* .shade{
+    width: 960px;
+    height: 750px;
+    background-color: black;
+} */
+
+.landing{
+    text-align: right;
+    margin-right: 320px;
+}
+
+.title{
+    font-size: 100px;
+    margin-top: -600px;
+    /* color: ivory; */
+    /* text-align: end; */
+    /* margin-left: 1000px; */
+    /* width: 1920px; */
+    /* position: absolute; */
+    /* background-image: url(https://media.nomadicmatt.com/2022/koreaguide1.jpg) */
+}
+
