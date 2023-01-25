@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Landing from './landing';
+// import Landing from './Landing';
+import Scroll from './Scroll';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Landing />
+    {/* <Landing /> */}
+    <Scroll />
   </React.StrictMode>
 );
 
