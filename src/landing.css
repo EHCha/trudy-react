@@ -1,6 +1,15 @@
+body {
+    margin: 0;
+    overflow-y: hidden;
+}
+
+.landing1{
+    height: 100vh;
+}
+
 .landing-image-container1{
-    width: 1910px;
-    height: 930px;
+    width: 100%;
+    height: 100vh;
     background: linear-gradient(to right,
     rgba(20, 20, 20, 0) 10%,
     rgba(20, 20, 20, 0.25) 25%,
@@ -13,8 +22,8 @@
 
 .trudy-header1{
     font-size: 100px;
-    margin-left: 1300px;
-    margin-top: -700px;
+    margin-left: 70%;
+    margin-top: -36.4%;
     color: ivory;
     font-weight: bold;
 }
@@ -22,20 +31,20 @@
 .trudy-detail1{
     font-size: 30px;
     width: 350px;
-    margin-left: 1300px;
+    margin-left: 70%;
     color: ivory;
     font-weight: bold;
 }
 
-.button1{
-
+.landing2{
+    height: 100vh;
 }
 
 .landing-image-container2{
-    width: 1910px;
-    height: 930px;
-    margin-top: 485px;
-    background: linear-gradient(to left,
+    width: 100%;
+    height: 100vh;
+    /* margin-top: 485px; */
+    background: linear-gradient(to right,
     rgba(20, 20, 20, 0) 10%,
     rgba(20, 20, 20, 0.25) 25%,
     rgba(20, 20, 20, 0.5) 50%,
@@ -46,30 +55,51 @@
     background-size: cover;
 }
 
+.trudy-header2{
+    font-size: 80px;
+    margin-left: 70%;
+    margin-top: -36.4%;
+    color: ivory;
+    font-weight: bold;
+}
+
+.trudy-detail2{
+    font-size: 30px;
+    width: 350px;
+    margin-left: 70%;
+    color: ivory;
+    font-weight: bold;
+
+}
+
+.landing3{
+    background-color: lightgrey;
+    height: 100vh;
+}
+
 .landing-image-container3{
     background: linear-gradient(to left,
     rgba(20, 20, 20, 0) 10%,
     rgba(20, 20, 20, 0.25) 25%,
     rgba(20, 20, 20, 0.5) 50%,
     rgba(20, 20, 20, 0.75) 75%,
-    rgba(20, 20, 20, 1) 150%), url("landing3.png");
-    width: 1400px;
-    height: 930px;
+    rgba(20, 20, 20, 0.9) 150%), url("landing3.png");
+    width: 70%;
+    height: 100vh;
     background-size: cover;
 }
 
 .landing-title3{
     font-size: 80px;
-    margin-left: 1420px;
-    margin-top: -700px;
+    margin-left: 1380px;
+    margin-top: -36.4%;
     color: rgb(35, 162, 35);
     font-weight: bold;
 }
 
 .landing-detail3{
-    font-size: 50px;
-    margin-left: 1420px;
-    /* white-space: pre-line; */
+    font-size: 40px;
+    margin-left: 72%;
     color: rgb(35, 162, 35);
     font-weight: bold;
 }
