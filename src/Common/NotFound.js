@@ -3,7 +3,7 @@ import React from 'react';
 const NotFound = () => {
   return (
     // 404 Not Found
-    <div>
+    <div style={{ fontSize }}>
       404 Error
     </div>
   );
