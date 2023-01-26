@@ -1,26 +1,28 @@
 import { useState, useEffect, useRef } from 'react';
-
-import Dots from './Dots';
-import './Scroll.css';
-import './Landing.css';
+import Dots from '../Common/Dots';
+import '../Landing/Landing.css';
 
 const DIVIDER_HEIGHT = 5;
 
-function Scroll() {
+// 스크롤 컴포넌트 추후 컴포넌트 폴더로 따로 export 예정
+
+function Landing(props) {
+  // 밑엔 스크롤
   const outerDivRef = useRef();
   const [scrollIndex, setScrollIndex] = useState(1);
   useEffect(() => {
     const wheelHandler = (e) => {
       e.preventDefault();
       const { deltaY } = e;
-      const { scrollTop } = outerDivRef.current; // 스크롤 위쪽 끝부분 위치
-      const pageHeight = window.innerHeight; // 화면 세로길이, 100vh와 같음
+      // 스크롤 위쪽 끝부분 위치
+      const { scrollTop } = outerDivRef.current;
+      // 화면 세로길이, 100vh와 같음
+      const pageHeight = window.innerHeight; 
 
       if (deltaY > 0) {
 
         if (scrollTop >= 0 && scrollTop < pageHeight) {
           // 현재 1페이지
-          console.log('1 page, down');
           outerDivRef.current.scrollTo({
             top: pageHeight + DIVIDER_HEIGHT,
             left: 0,
@@ -29,7 +31,6 @@ function Scroll() {
           setScrollIndex(2);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
             // 현재 2페이지
-            console.log('2 page, down');
             outerDivRef.current.scrollTo({
               top: pageHeight * 2 + DIVIDER_HEIGHT * 2,
               left: 0,
@@ -38,7 +39,6 @@ function Scroll() {
           setScrollIndex(3);
         } else {
             // 현재 3페이지
-            console.log('3 page, down');
             outerDivRef.current.scrollTo({
               top: pageHeight * 2 + DIVIDER_HEIGHT * 2,
               left: 0,
@@ -50,7 +50,6 @@ function Scroll() {
         // 스크롤 올릴 때때
         if (scrollTop >=0 && scrollTop < pageHeight) {
           // 현재 1페이지
-          console.log('1 page, up');
           outerDivRef.current.scrollTo({
             top: 0,
             left: 0,
@@ -59,7 +58,6 @@ function Scroll() {
           setScrollIndex(1);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
           // 현재 2페이지
-          console.log('2 page, up');
           outerDivRef.current.scrollTo({
             top: 0,
             left: 0,
@@ -67,7 +65,6 @@ function Scroll() {
           });
           setScrollIndex(1);
         } else {
-          console.log('3 page, up');
           outerDivRef.current.scrollTo({
             top: pageHeight + DIVIDER_HEIGHT,
             left: 0,
@@ -86,9 +83,13 @@ function Scroll() {
   const Item = ({ text }) => {
     return text;
   };
-    return (
-      <div ref={outerDivRef} className="outer">
-        <Dots scrollIndex={scrollIndex} />
+
+
+// 이하 html
+
+  return (
+    <div ref={outerDivRef} className="outer">
+      <Dots scrollIndex={scrollIndex} />
         <div className='landing-container'>
           {/* 랜딩 1번째 화면 */}
           <div className='landing1'>
@@ -122,10 +123,9 @@ function Scroll() {
               <Item text={['Interactive Map', <br />, 'Messenger', <br />, 'Planner', <br />, <br />, 'Both Web & Mobile']}/>
             </div>
           </div>
-
-      </div>
+        </div>
     </div>
   );
 }
 
-export default Scroll;
+export default Landing;
